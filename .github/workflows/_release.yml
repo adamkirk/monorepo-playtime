@@ -35,6 +35,8 @@ jobs:
         with:
           node-version: lts/*
 
+      - run: npm ci
+
       - name: Release
         run: bash scripts/semanticrelease.sh --extends ./${{ inputs.path }}/release.config.cjs
         env:

@@ -1,9 +1,12 @@
+const { buildReleaseRules } = require('../release.utils.cjs');
+
 module.exports = {
   branches: ['main'],
   tagFormat: 'api-v${version}',
   plugins: [
     ['@semantic-release/commit-analyzer', {
       preset: 'conventionalcommits',
+      releaseRules: buildReleaseRules('api'),
     }],
     ['@semantic-release/release-notes-generator', {
       preset: 'conventionalcommits',

@@ -1,0 +1,19 @@
+module.exports = {
+  branches: ['main'],
+  tagFormat: 'chart-api-v${version}',
+  plugins: [
+    ['@semantic-release/commit-analyzer', {
+      preset: 'conventionalcommits',
+    }],
+    ['@semantic-release/release-notes-generator', {
+      preset: 'conventionalcommits',
+    }],
+    ['@semantic-release/github', {
+      successComment: false,
+      labels: false,
+    }],
+    ['@semantic-release/exec', {
+      publishCmd: 'echo "${nextRelease.version}" > nextversion && echo "true" > released',
+    }],
+  ],
+};

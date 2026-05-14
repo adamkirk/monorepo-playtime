@@ -1,0 +1,15 @@
+name: Release chart-ui
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'charts/ui/**'
+
+jobs:
+  release:
+    uses: ./.github/workflows/_release.yml
+    with:
+      path: charts/ui
+    secrets: inherit

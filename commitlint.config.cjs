@@ -22,5 +22,7 @@ module.exports = {
       'test',
     ]],
     'type-empty': [2, 'never'],
+    'scope-empty': [2, 'never'],
+    'scope-enum': [2, 'always', ['api', 'ui', 'cli', 'chart-api', 'chart-ui', 'ci']],
   },
 };

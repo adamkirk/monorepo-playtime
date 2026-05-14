@@ -1,4 +1,4 @@
-const ALL_SCOPES = ['api', 'ui', 'cli', 'chart-api', 'chart-ui'];
+const ALL_SCOPES = ['api', 'ui', 'cli', 'chart-api', 'chart-ui', 'ci'];
 
 function buildReleaseRules(scope) {
   return [

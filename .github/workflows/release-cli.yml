@@ -1,0 +1,15 @@
+name: Release cli
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cli/**'
+
+jobs:
+  release:
+    uses: ./.github/workflows/_release.yml
+    with:
+      path: cli
+    secrets: inherit
